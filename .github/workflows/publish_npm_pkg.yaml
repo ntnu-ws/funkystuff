@@ -22,7 +22,6 @@ jobs:
         env:
           NPM_THING: ${{ secrets.NPM_THING }}
       - run: npm install
-      - run: npm run build
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
