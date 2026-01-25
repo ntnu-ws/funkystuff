@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: "25.x"
           registry-url: "https://npm.pkg.github.com"
+      - run: echo "NPM_THING=$NPM_THING" >>.env
+        env:
+          NPM_THING: ${{ secrets.NPM_THING }}
       - run: npm install
       - run: npm run build
       - run: npm publish --access public
