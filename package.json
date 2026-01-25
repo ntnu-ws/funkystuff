@@ -9,5 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntnu-ws/funkystuff.git"
+  }
 }
