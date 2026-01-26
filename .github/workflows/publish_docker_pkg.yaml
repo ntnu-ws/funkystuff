@@ -32,4 +32,5 @@ jobs:
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # ratchet:docker/build-push-action@v6
         with:
           push: true
-          tags: ntnu-ws/funkystuff:latest
+          tags: ghcr.io/ntnu-ws/funkystuff:latest
+          platforms: linux/amd64,linux/arm64
