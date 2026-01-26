@@ -12,6 +12,11 @@ jobs:
       packages: write
       id-token: write
     steps:
+      - name: set version
+        id: set-version
+        run: |
+          echo Faking a Semantic Version
+          echo "version=1.$(date "+%Y%m%d%H%M%S")" >> ${GITHUB_OUTPUT}
       - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # ratchet:actions/checkout@v2
         with:
           persist-credentials: false
@@ -32,5 +37,6 @@ jobs:
         uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # ratchet:docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/ntnu-ws/funkystuff:latest
+          tags: ghcr.io/ntnu-ws/funkystuff:${{ steps.set-version.outputs.version }}
           platforms: linux/amd64,linux/arm64
+
