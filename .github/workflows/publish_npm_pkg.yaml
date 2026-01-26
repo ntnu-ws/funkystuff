@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: "25.x"
           registry-url: "git+https://github.com/ntnu-ws/funkystuff.git"
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "NPM_THING=$NPM_THING" >>.env
         env:
           NPM_THING: ${{ secrets.NPM_THING }}
