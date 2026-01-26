@@ -1,5 +1,5 @@
 {
-  "name": "funkystuff",
+  "name": "@ntnu-ws/funkystuff",
   "version": "1.0.0",
   "description": "Tullepakke",
   "main": "index.js",
