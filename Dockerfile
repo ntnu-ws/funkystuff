@@ -1,3 +1,3 @@
-FROM node:25-alpine
+FROM alpine:latest
 
 COPY . .
