@@ -10,10 +10,6 @@
   "author": "",
   "license": "MIT",
   "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ntnu-ws/funkystuff.git"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }
