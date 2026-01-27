@@ -20,7 +20,9 @@ jobs:
       - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # ratchet:actions/checkout@v2
         with:
           persist-credentials: false
-      - run: echo "DOCKER_THING=$DOCKER_THING" >>.env
+      - run: |
+          echo "DOCKER_THING=$DOCKER_THING" >>.env
+          ls -lA
         env:
           DOCKER_THING: ${{ secrets.DOCKER_THING }}
       - name: Login to GitHub Container Registry
