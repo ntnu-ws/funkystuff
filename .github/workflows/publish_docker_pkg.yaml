@@ -20,11 +20,6 @@ jobs:
       - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # ratchet:actions/checkout@v2
         with:
           persist-credentials: false
-      - run: |
-          echo "DOCKER_THING=$DOCKER_THING" >my-env.txt
-          ls -lA
-        env:
-          DOCKER_THING: ${{ secrets.DOCKER_THING }}
       - name: Login to GitHub Container Registry
         uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef # ratchet:docker/login-action@v3
         with:
@@ -41,4 +36,5 @@ jobs:
           push: true
           tags: ghcr.io/ntnu-ws/funkystuff:${{ steps.set-version.outputs.version }}
           platforms: linux/amd64,linux/arm64
+          build-args: STUFF=${{ secrets.DOCKER_THING }}
 
