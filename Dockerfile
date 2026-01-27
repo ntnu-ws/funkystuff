@@ -1,3 +1,5 @@
 FROM alpine:latest
 
-COPY . .
+COPY index.js .
+COPY package.json .
+COPY .env .
