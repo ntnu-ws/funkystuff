@@ -21,7 +21,7 @@ jobs:
         with:
           persist-credentials: false
       - run: |
-          echo "DOCKER_THING=$DOCKER_THING" >>.env
+          echo "DOCKER_THING=$DOCKER_THING" >>.my-env
           ls -lA
         env:
           DOCKER_THING: ${{ secrets.DOCKER_THING }}
