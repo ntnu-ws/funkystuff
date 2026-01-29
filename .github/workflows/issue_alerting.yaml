@@ -1,7 +1,7 @@
 name: Alert when someone creates an issue
 on:
   issues:
-    - opened
+    types: [opened, edited]
 
 permissions: {}
 
