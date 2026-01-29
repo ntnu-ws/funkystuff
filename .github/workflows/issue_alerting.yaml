@@ -16,7 +16,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Send msg to Slack
-      - run: |
+        run: |
           if [[ -n $ISSUE_THING ]]; then
             echo "An issue with title ${{ github.event.issue.title }} has been created"
             echo "In the real world this should be sent to Slack or something"
