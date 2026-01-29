@@ -1,0 +1,25 @@
+name: Alert when someone creates an issue
+on:
+  issues:
+    - opened
+
+permissions: {}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # ratchet:actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Send msg to Slack
+      - run: |
+          if [[ -n $ISSUE_THING ]]; then
+            echo "An issue with title ${{ github.event.issue.title }} has been created"
+            echo "In the real world this should be sent to Slack or something"
+          fi
+        env:
+          ISSUE_THING: ${{ secrets.ISSUE_THING }}
