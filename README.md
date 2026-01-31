@@ -1,6 +1,6 @@
 # Velkommen til workshop!
 
-For å gjennomføre denne workshopen må du å kunne laste ned pakker fra "GitHub Package Registry". For å kunne kjøre dette må du lage et "Personal Access Token", også kjent som et "PAT".
+For å gjennomføre denne workshopen må du å kunne laste ned pakker fra "GitHub Package Registry". For å kunne gjøre dette må du lage et "Personal Access Token", også kjent som et "PAT".
 
 ### Lage et token
 
