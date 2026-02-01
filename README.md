@@ -1,31 +1,13 @@
 # Velkommen til workshop!
 
-For å gjennomføre denne workshopen må du å kunne laste ned pakker fra "GitHub Package Registry". For å kunne gjøre dette må du lage et "Personal Access Token", også kjent som et "PAT".
+I denne workshopen skal vi jakte hemmeligheter i et GitHub-repo. For å kunne finne alle må konfigurere et par småting. Instruksjoner for å gjøre dette finner du [her](setup.md).
 
-### Lage et token
+I dette repoet er det mulig å finne 5 stk. hemmeligheter, alle er på formen `ntnuws{en_eller_annen_tekst}`
 
-- Logg på GitHub.com
-- Gå til [settings](https://github.com/settings/tokens) (eller klikk på profilbildet ditt oppe i hjørnet og velg "settings -> Developer settings -> Personal access tokens -> Tokens (classic)")
-- Klikk på "Generate new token -> Generate new token (classic)"
-- Gi tokenet et passende navn og velg den korteste levetiden (7 dager)
-- Kryss av for scopet `read:packages`
-- Klikk på den grønne knappen nederst for å generere tokenet.
+Vanlige måter å lekke hemmeliheter på:
+- "Hardkode" dem i koden eller andre filer som sjekkes inn.
+- Ved å tro at de forsvinner fra Git-historikken hvis man overskriver filer i nye commits.
+- Ved at de sniker seg med i ting man bygger, som feks npm-pakker eller Docker images. 
+- Ved at de kan stjeles fra feilkonfigurerte byggejobber ("GitHub Actions"). Tips: Verktøyet [Zizmor](https://zizmor.sh) kan hjelpe deg med å finne feilkonfigurasjoner.
 
-Tokenet vises kun denne ene gangen, så kopier det til et trygt sted sånn at det kan brukes i de neste stegene.
-
-## Sette opp bruk av tokenet
-
-### npm
-
-Legg følgende linje inn i din ~/.mpmrc:
-`@ntnu-ws:registry=https://npm.pkg.github.com`. Dette gjør at npm vil hente pakker med scope `@ntnu-ws` fra GitHub istedenfor fra npmjs.com.
-
-Dette kan gjøres vha en teksteditor eller ved å kjøre følgede kommando: `echo “@ntnu-ws:registry=https://npm.pkg.github.com” >> ~/.npmrc`.
-
-Kjør kommandoen `npm login --registry https://npm.pkg.github.com`, oppgi ditt GitHub brukernavn og tokenet som passord.
-
-### Docker
-
-Kjør kommandoen `docker login ghcr.io`, oppgi ditt HitHub brukernavn og tokenet som passord.
-
-Du skal nå være klar til å laste ned de pakkene du trenger :crossed_fingers: 
+Happy hunting!
