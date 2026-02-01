@@ -17,7 +17,7 @@ Tokenet vises kun denne ene gangen, så kopier det til et trygt sted sånn at de
 
 ### For npm
 
-Legg følgende linje inn i din ~/.mpmrc:
+Legg følgende linje inn i din ~/.npmrc:
 `@ntnu-ws:registry=https://npm.pkg.github.com`. Dette gjør at npm vil hente pakker med scope `@ntnu-ws` fra GitHub istedenfor fra npmjs.com.
 
 Dette kan gjøres vha en teksteditor eller ved å kjøre følgede kommando: `echo “@ntnu-ws:registry=https://npm.pkg.github.com” >> ~/.npmrc`.
@@ -26,6 +26,6 @@ Kjør kommandoen `npm login --registry https://npm.pkg.github.com`, oppgi ditt G
 
 ### For Docker
 
-Kjør kommandoen `docker login ghcr.io`, oppgi ditt HitHub brukernavn og tokenet som passord.
+Kjør kommandoen `docker login ghcr.io`, oppgi ditt GitHub brukernavn og tokenet som passord.
 
 Du skal nå være klar til å laste ned de pakkene du trenger :crossed_fingers: 
