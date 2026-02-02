@@ -17,6 +17,8 @@ Tokenet vises kun denne ene gangen, så kopier det til et trygt sted sånn at de
 
 ### For npm
 
+Installer [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) hvis du ikke allerede har den.
+
 Legg følgende linje inn i din ~/.npmrc:
 `@ntnu-ws:registry=https://npm.pkg.github.com`. Dette gjør at npm vil hente pakker med scope `@ntnu-ws` fra GitHub istedenfor fra npmjs.com.
 
@@ -25,6 +27,8 @@ Dette kan gjøres vha en teksteditor eller ved å kjøre følgede kommando: `ech
 Kjør kommandoen `npm login --registry https://npm.pkg.github.com`, oppgi ditt GitHub brukernavn og tokenet som passord.
 
 ### For Docker
+
+Installer [Docker Desktop](https://docs.docker.com/desktop/) eller tilsvarende hvis du ikke allerede har den.
 
 Kjør kommandoen `docker login ghcr.io`, oppgi ditt GitHub brukernavn og tokenet som passord.
 
