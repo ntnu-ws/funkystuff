@@ -22,7 +22,7 @@ Installer [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-an
 Legg følgende linje inn i din ~/.npmrc:
 `@ntnu-ws:registry=https://npm.pkg.github.com`. Dette gjør at npm vil hente pakker med scope `@ntnu-ws` fra GitHub istedenfor fra npmjs.com.
 
-Dette kan gjøres vha en teksteditor eller ved å kjøre følgede kommando: `echo “@ntnu-ws:registry=https://npm.pkg.github.com” >> ~/.npmrc`.
+Dette kan gjøres vha en teksteditor eller ved å kjøre følgede kommando: `echo @ntnu-ws:registry=https://npm.pkg.github.com >> ~/.npmrc`.
 
 Kjør kommandoen `npm login --registry https://npm.pkg.github.com`, oppgi ditt GitHub brukernavn og tokenet som passord.
 
